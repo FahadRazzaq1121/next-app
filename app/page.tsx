@@ -8,9 +8,36 @@ import {
 
 export default function Index() {
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
-        <div className="w-full flex justify-between items-center gap-20 p-3 text-sm">
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+        alignItems: "center",
+        flex: 1,
+        width: "100%",
+      }}
+    >
+      <nav
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+          height: "4rem",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "20px",
+            padding: "12px",
+            fontSize: "0.875rem",
+          }}
+        >
           <SignedOut>
             <SignInButton />
           </SignedOut>

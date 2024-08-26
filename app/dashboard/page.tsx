@@ -1,6 +1,13 @@
 "use client";
 
-import { useAuth } from "@clerk/nextjs";
+import Navbar from "@/component/Navbar";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+  useAuth,
+} from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 const ClientDashboard = () => {
@@ -14,7 +21,7 @@ const ClientDashboard = () => {
     router.push("/dashboard");
   }
 
-  return <div>Welcome to your dashboard!</div>;
+  return <Navbar />;
 };
 
 export default ClientDashboard;
