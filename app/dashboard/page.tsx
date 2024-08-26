@@ -1,6 +1,6 @@
 "use client";
 
-import { SignedIn, SignOutButton, useAuth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 const ClientDashboard = () => {
@@ -10,6 +10,8 @@ const ClientDashboard = () => {
   if (!isSignedIn) {
     router.push("/signin");
     return <div>Redirecting...</div>;
+  } else {
+    router.push("/dashboard");
   }
 
   return <div>Welcome to your dashboard!</div>;
